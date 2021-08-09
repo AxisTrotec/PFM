@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  h1 Month: #{spending.month}
+
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Spendings
+
+    dl
+      each spending in spendings_list
+      li $#{spending.spent}
+      else
+        p There are no spendings for this month.
